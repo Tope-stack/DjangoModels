@@ -8,5 +8,5 @@ class Post(models.Model):
     Author = models.ForeignKey(User, on_delete=models.CASCADE)
     Created_date = models.DateTimeField(auto_now_add=True)
     Published_date = models.DateTimeField()
-    def __str__(self) -> str:
-        return super().__str__()
+    def __str__(self):
+        return self.Title + ' | ' + self.Author
